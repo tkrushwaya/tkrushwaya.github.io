@@ -93,20 +93,79 @@
     <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold mb-12 text-center header-color">About Me</h2>
         <div class="flex flex-col items-center">
-            <div class="profile-placeholder mb-10" data-aos="zoom-in"><span>TKMRushwaya</span></div>
+            <div class="profile-placeholder-wrapper mb-10">
+                <div class="profile-placeholder">
+                    <div class="profile-text">
+                        <span class="initials">TKM</span>
+                        <span class="surname">Rushwaya</span>
+                    </div>
+                </div>
+                <div class="shine-circle"></div>
+                <div class="light-sweep"></div>
+            </div>
             <div class="max-w-3xl text-center">
                 <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                    I am a dedicated scholar passionate about understanding complex social phenomena through interdisciplinary lenses. Insights from political systems, conflict transformation, public health, and philosophy inform my research.
+                    I am a dedicated scholar passionate about understanding complex social phenomena through interdisciplinary lenses. I am interested in insights from political systems, conflict transformation, public health, and philosophy to explore the intricate intersections of societal challenges.
                 </p>
                 <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                    My academic journey spans diverse fields, contributing to a comprehensive understanding of societal structures and human behavior. This multidisciplinary foundation shapes both my methodology and approach to contemporary issues.
+                    My academic journey spans diverse fields, each contributing to a comprehensive understanding of societal structures and human behavior. This multidisciplinary foundation shapes both my research methodology and scholarly approach to addressing contemporary issues.
                 </p>
                 <p class="text-lg text-gray-700 leading-relaxed">
-                    Currently pursuing a PhD in Philosophy at the University of Johannesburg, focusing on comprehensive ethical decision-making frameworks for pandemic response.
+                    Currently, I'm pursuing my PhD in Philosophy at the University of Johannesburg, focusing on developing comprehensive ethical decision-making frameworks for pandemic response.
                 </p>
             </div>
         </div>
     </div>
+</section>
+
+<style>
+/* Profile Placeholder Aesthetic */
+.profile-placeholder-wrapper { position: relative; width: 220px; height: 220px; }
+.profile-placeholder {
+    width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, #36454F 0%, #607080 100%);
+    border-radius: 50%; box-shadow: 0 10px 25px rgba(0,0,0,0.1); position: relative; z-index: 2;
+    text-align: center; padding: 1rem; transition: all 0.3s ease;
+}
+.profile-placeholder:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+
+.profile-text { display: flex; flex-direction: column; align-items: center; }
+.profile-text .initials {
+    font-weight: 900; font-size: 3.5rem;
+    background: linear-gradient(270deg, #d4d4d4, #a9a9a9, #c0c0c0, #808080);
+    background-size: 800% 800%; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    animation: gradientShift 6s ease infinite; text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.profile-text .surname {
+    font-weight: 600; font-size: 1.3rem; margin-top: -5px;
+    background: linear-gradient(270deg, #d4d4d4, #a9a9a9, #c0c0c0, #808080);
+    background-size: 800% 800%; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    animation: gradientShift 8s ease infinite; letter-spacing: 1px;
+}
+
+@keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
+.shine-circle {
+    position: absolute; top: -5px; left: -5px; width: 230px; height: 230px;
+    border-radius: 50%; border: 4px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 20px rgba(255,255,255,0.15), 0 0 40px rgba(255,255,255,0.1);
+    animation: rotateShine 6s linear infinite, pulseGlow 3s ease-in-out infinite; z-index: 1;
+}
+@keyframes rotateShine { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes pulseGlow { 0%,100% { box-shadow: 0 0 20px rgba(255,255,255,0.15),0 0 40px rgba(255,255,255,0.1); } 50% { box-shadow: 0 0 30px rgba(255,255,255,0.2),0 0 60px rgba(255,255,255,0.12); } }
+
+.profile-placeholder-wrapper:hover .shine-circle { box-shadow: 0 0 35px rgba(255,255,255,0.2), 0 0 70px rgba(255,255,255,0.15); }
+.profile-placeholder-wrapper:hover .profile-text .initials { font-size: 3.7rem; text-shadow: 0 3px 10px rgba(0,0,0,0.25); }
+.profile-placeholder-wrapper:hover .profile-text .surname { font-size: 1.4rem; }
+
+.light-sweep {
+    position: absolute; top: -10%; left: -10%; width: 140%; height: 140%; background: rgba(255,255,255,0.1);
+    border-radius: 50%; transform: rotate(-45deg) translateX(-100%);
+    animation: sweep 3s linear infinite; pointer-events: none; z-index: 3;
+}
+@keyframes sweep { 0% { transform: rotate(-45deg) translateX(-100%); opacity: 0; } 50% { opacity: 1; } 100% { transform: rotate(-45deg) translateX(100%); opacity: 0; } }
+</style>
+
 </section>
 
 <!-- Education Section -->
