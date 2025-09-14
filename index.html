@@ -42,21 +42,19 @@
         .education-card { transition: all 0.3s ease; border-bottom: 3px solid transparent; }
         .education-card:hover { transform: translateY(-5px); border-bottom-color: #36454F; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
 
+        /* FIX: Add padding to account for fixed header */
+        body {
+            padding-top: 80px; /* This pushes content below the fixed header */
+        }
+
         @media (max-width: 768px) {
             .research-timeline h4 { position: relative !important; top: auto !important; background: none !important; box-shadow: none !important; }
             .mobile-menu { position: absolute; top: 100%; left: 0; right: 0; background-color: #36454F; padding: 1rem; flex-direction: column; align-items: flex-start; }
-        }
-
-        /* Add this CSS to fix the header overlap issue */
-        main {
-          padding-top: 80px; /* This pushes content below the fixed header */
-        }
-
-        /* For mobile responsiveness */
-        @media (max-width: 768px) {
-          main {
-            padding-top: 100px; /* Slightly more padding for mobile */
-          }
+            
+            /* FIX: Adjust padding for mobile */
+            body {
+                padding-top: 70px;
+            }
         }
     </style>
 </head>
@@ -87,277 +85,274 @@
     </div>
 </nav>
 
-<!-- Main content wrapper -->
-<main>
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-gray-100 to-gray-200 py-20">
-        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6 header-color leading-tight">Exploring Public Health Ethics Decision-Making Frameworks</h1>
-            <p class="text-xl text-gray-700 mb-2 max-w-3xl mx-auto leading-relaxed">Virtues, deontology, and utilitarianism in pandemics.</p>
-            <p class="text-lg text-gray-600 italic mb-10">University of Johannesburg 2025-2029</p>
-            <a href="#research" class="bg-header hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center">
-                Explore My Research
-                <i data-feather="arrow-down" class="ml-2 w-5 h-5"></i>
-            </a>
-        </div>
-    </section>
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-gray-100 to-gray-200 py-20">
+    <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 header-color leading-tight">Exploring Public Health Ethics Decision-Making Frameworks</h1>
+        <p class="text-xl text-gray-700 mb-2 max-w-3xl mx-auto leading-relaxed">Virtues, deontology, and utilitarianism in pandemics.</p>
+        <p class="text-lg text-gray-600 italic mb-10">University of Johannesburg 2025-2029</p>
+        <a href="#research" class="bg-header hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center">
+            Explore My Research
+            <i data-feather="arrow-down" class="ml-2 w-5 h-5"></i>
+        </a>
+    </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20" data-aos="fade-up">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center header-color">About Me</h2>
-            <div class="flex flex-col items-center">
-                <div class="profile-placeholder-wrapper mb-10">
-                    <div class="profile-placeholder">
-                        <div class="profile-text">
-                            <span class="initials">TKM</span>
-                            <span class="surname">Rushwaya</span>
-                        </div>
+<!-- About Section -->
+<section id="about" class="py-20" data-aos="fade-up">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center header-color">About Me</h2>
+        <div class="flex flex-col items-center">
+            <div class="profile-placeholder-wrapper mb-10">
+                <div class="profile-placeholder">
+                    <div class="profile-text">
+                        <span class="initials">TKM</span>
+                        <span class="surname">Rushwaya</span>
                     </div>
-                    <div class="shine-circle"></div>
-                    <div class="light-sweep"></div>
                 </div>
-                <div class="max-w-3xl text-center">
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        I am a dedicated scholar passionate about understanding complex social phenomena through interdisciplinary lenses. I am interested in insights from political systems, conflict transformation, public health, and philosophy to explore the intricate intersections of societal challenges.
-                    </p>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        My academic journey spans diverse fields, each contributing to a comprehensive understanding of societal structures and human behavior. This multidisciplinary foundation shapes both my research methodology and scholarly approach to addressing contemporary issues.
-                    </p>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        Currently, I'm pursuing my PhD in Philosophy at the University of Johannesburg, focusing on developing comprehensive ethical decision-making frameworks for pandemic response.
-                    </p>
-                </div>
+                <div class="shine-circle"></div>
+                <div class="light-sweep"></div>
             </div>
-        </div>
-    </section>
-
-    <style>
-    /* Profile Placeholder Aesthetic */
-    .profile-placeholder-wrapper { position: relative; width: 220px; height: 220px; }
-    .profile-placeholder {
-        width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
-        background: linear-gradient(135deg, #36454F 0%, #607080 100%);
-        border-radius: 50%; box-shadow: 0 10px 25px rgba(0,0,0,0.1); position: relative; z-index: 2;
-        text-align: center; padding: 1rem; transition: all 0.3s ease;
-    }
-    .profile-placeholder:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
-
-    .profile-text { display: flex; flex-direction: column; align-items: center; }
-    .profile-text .initials {
-        font-weight: 900; font-size: 3.5rem;
-        background: linear-gradient(270deg, #d4d4d4, #a9a9a9, #c0c0c0, #808080);
-        background-size: 800% 800%; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        animation: gradientShift 6s ease infinite; text-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-    .profile-text .surname {
-        font-weight: 600; font-size: 1.3rem; margin-top: -5px;
-        background: linear-gradient(270deg, #d4d4d4, #a9a9a9, #c0c0c0, #808080);
-        background-size: 800% 800%; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        animation: gradientShift 8s ease infinite; letter-spacing: 1px;
-    }
-
-    @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-
-    .shine-circle {
-        position: absolute; top: -5px; left: -5px; width: 230px; height: 230px;
-        border-radius: 50%; border: 4px solid rgba(255,255,255,0.2);
-        box-shadow: 0 0 20px rgba(255,255,255,0.15), 0 0 40px rgba(255,255,255,0.1);
-        animation: rotateShine 6s linear infinite, pulseGlow 3s ease-in-out infinite; z-index: 1;
-    }
-    @keyframes rotateShine { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    @keyframes pulseGlow { 0%,100% { box-shadow: 0 0 20px rgba(255,255,255,0.15),0 0 40px rgba(255,255,255,0.1); } 50% { box-shadow: 0 0 30px rgba(255,255,255,0.2),0 0 60px rgba(255,255,255,0.12); } }
-
-    .profile-placeholder-wrapper:hover .shine-circle { box-shadow: 0 0 35px rgba(255,255,255,0.2), 0 0 70px rgba(255,255,255,0.15); }
-    .profile-placeholder-wrapper:hover .profile-text .initials { font-size: 3.7rem; text-shadow: 0 3px 10px rgba(0,0,0,0.25); }
-    .profile-placeholder-wrapper:hover .profile-text .surname { font-size: 1.4rem; }
-
-    .light-sweep {
-        position: absolute; top: -10%; left: -10%; width: 140%; height: 140%; background: rgba(255,255,255,0.1);
-        border-radius: 50%; transform: rotate(-45deg) translateX(-100%);
-        animation: sweep 3s linear infinite; pointer-events: none; z-index: 3;
-    }
-    @keyframes sweep { 0% { transform: rotate(-45deg) translateX(-100%); opacity: 0; } 50% { opacity: 1; } 100% { transform: rotate(-45deg) translateX(100%); opacity: 0; } }
-    </style>
-
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="py-20 bg-gray-100" data-aos="fade-up">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center header-color">Education</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- PhD Card -->
-                <div class="education-card bg-white p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center mb-4">
-                        <div class="w-14 h-14 bg-header rounded-full flex items-center justify-center text-white mr-5 shadow-md">
-                            <i data-feather="award" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold header-color">PhD in Philosophy</h3>
-                    </div>
-                    <p class="text-gray-600 font-medium mb-2">University of Johannesburg</p>
-                    <p class="text-gray-500 mb-4">2025 - 2029</p>
-                    <p class="text-gray-700 leading-relaxed">
-                        Developing comprehensive ethical decision-making frameworks for pandemic response, integrating virtue ethics, deontology, and utilitarianism.
-                    </p>
-                </div>
-
-                <!-- MPhil International Community Health Card -->
-                <div class="education-card bg-white p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center mb-4">
-                        <div class="w-14 h-14 bg-header rounded-full flex items-center justify-center text-white mr-5 shadow-md">
-                            <i data-feather="heart" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold header-color">MPhil International Community Health</h3>
-                    </div>
-                    <p class="text-gray-600 font-medium mb-2">University of Oslo</p>
-                    <p class="text-gray-500 mb-4">2020 - 2023</p>
-                    <p class="text-gray-700 leading-relaxed">
-                        Examined vaccine nationalism during the COVID-19 pandemic, analyzing moral dimensions in disaster situations.
-                    </p>
-                </div>
-
-                <!-- MPhil Peace and Conflict Card -->
-                <div class="education-card bg-white p-8 rounded-xl" data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex items-center mb-4">
-                        <div class="w-14 h-14 bg-header rounded-full flex items-center justify-center text-white mr-5 shadow-md">
-                            <i data-feather="globe" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold header-color">MPhil Peace and Conflict Transformation</h3>
-                    </div>
-                    <p class="text-gray-600 font-medium mb-2">UIT - The Arctic University of Norway</p>
-                    <p class="text-gray-500 mb-4">2018 - 2020</p>
-                    <p class="text-gray-700 leading-relaxed">
-                        Explored how civil society organizations advocate for dissent, using Inform Action Kenya as a case study.
-                    </p>
-                </div>
-
-                <!-- BSc Hons Political Science Card -->
-                <div class="education-card bg-white p-8 rounded-xl" data-aos="fade-up" data-aos-delay="400">
-                    <div class="flex items-center mb-4">
-                        <div class="w-14 h-14 bg-header rounded-full flex items-center justify-center text-white mr-5 shadow-md">
-                            <i data-feather="book" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold header-color">BSc Hons Political Science</h3>
-                    </div>
-                    <p class="text-gray-600 font-medium mb-2">University of Zimbabwe</p>
-                    <p class="text-gray-500 mb-4">2013 - 2016</p>
-                    <p class="text-gray-700 leading-relaxed">
-                        Investigated the role of women-related civil society organizations in promoting women's political participation in Zimbabwe.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Timeline Section -->
-    <section id="research" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center header-color" data-aos="fade-down">Research Evolution</h2>
-            <div class="research-timeline max-w-4xl mx-auto mb-16">
-                <!-- BSc Hons Political Science -->
-                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
-                    <h4 class="text-xl font-semibold mb-4 header-color">BSc. Hons in Political Science (2013 - 2016)</h4>
-                    <p class="text-gray-700 mb-8 leading-relaxed">
-                        Investigated the role of women-related civil society organizations in Zimbabwe and their impact on promoting women's political participation.
-                    </p>
-                </div>
-
-                <!-- MPhil Peace and Conflict Transformation -->
-                <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
-                    <h4 class="text-xl font-semibold mb-4 header-color">MPhil Peace and Conflict Transformation (2018 - 2020)</h4>
-                    <p class="text-gray-700 mb-4 leading-relaxed">
-                        Explored how sections within civil society advocate for dissent, using Inform Action Kenya as a case study to understand mechanisms of conflict transformation.
-                    </p>
-                    <a href="https://munin.uit.no/handle/10037/18827" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-header hover:text-gray-700 font-medium transition-all duration-300 group mb-8">
-                        View Dissertation
-                        <i data-feather="external-link" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                    </a>
-                </div>
-
-                <!-- MPhil International Community Health -->
-                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
-                    <h4 class="text-xl font-semibold mb-4 header-color">MPhil International Community Health (2020 - 2023)</h4>
-                    <p class="text-gray-700 mb-8 leading-relaxed">
-                        Examined vaccine nationalism during the COVID-19 pandemic, analyzing whether such actions constitute moral dilemmas, virtuous actions, or vicious actions in disaster situations.
-                    </p>
-                </div>
-
-                <!-- PhD Candidate in Philosophy -->
-                <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
-                    <h4 class="text-xl font-semibold mb-4 header-color">PhD Candidate in Philosophy (2025 - Present)</h4>
-                    <p class="text-gray-700 mb-8 leading-relaxed">
-                        Developing comprehensive ethical decision-making frameworks for pandemic response, integrating virtue ethics, deontology, and utilitarianism.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Current Research Focus -->
-            <div class="max-w-4xl mx-auto mb-16">
-                <h3 class="text-2xl font-semibold mb-8 header-color text-center" data-aos="fade-up">Current Research Focus</h3>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Methodology Card 1 -->
-                    <div class="bg-gray-50 p-8 rounded-xl methodology-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex items-center mb-4">
-                            <div class="w-14 h-14 bg-header rounded-full flex items-center justify-center text-white mr-5 shadow-md">
-                                <i data-feather="layers" class="w-7 h-7"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold header-color">Integrated Ethical Frameworks</h4>
-                        </div>
-                        <p class="text-gray-700 leading-relaxed">
-                            Developing comprehensive public health ethics frameworks that synthesise virtue ethics, deontology, and utilitarianism to address complex ethical challenges in public health emergencies. This includes creating decision-making tools for policymakers during crises.
-                        </p>
-                    </div>
-
-                    <!-- Methodology Card 2 -->
-                    <div class="bg-gray-50 p-8 rounded-xl methodology-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="flex items-center mb-4">
-                            <div class="w-14 h-14 bg-header rounded-full flex items-center justify-center text-white mr-5 shadow-md">
-                                <i data-feather="crosshair" class="w-7 h-7"></i>
-                            </div>
-                            <h4 class="text-xl font-semibold header-color">Interdisciplinary Methodology</h4>
-                        </div>
-                        <p class="text-gray-700 leading-relaxed">
-                            Synthesising insights from public health ethics and moral philosophy through philosophical and conceptual analysis to create holistic frameworks for ethical decision-making. This approach bridges theoretical philosophy with practical public health applications.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center header-color">Contact & Collaboration</h2>
-            <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+            <div class="max-w-3xl text-center">
                 <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                    I welcome opportunities for academic collaboration, research partnerships, and scholarly discourse on public health ethics, moral philosophy, and interdisciplinary approaches to societal challenges.
+                    I am a dedicated scholar passionate about understanding complex social phenomena through interdisciplinary lenses. I am interested in insights from political systems, conflict transformation, public health, and philosophy to explore the intricate intersections of societal challenges.
                 </p>
-                <div class="grid md:grid-cols-2 gap-6 mt-8">
-                    <div class="flex items-center">
-                        <div class="w-12 h-12 bg-header rounded-full flex items-center justify-center text-white mr-4 shadow-md">
-                            <i data-feather="mail" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <p class="text-sm text-gray-500">Email</p>
-                            <a href="mailto:217048226@student.uj.ac.za" class="text-header hover:text-gray-700 font-medium">217048226@student.uj.ac.za</a>
-                        </div>
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    My academic journey spans diverse fields, each contributing to a comprehensive understanding of societal structures and human behavior. This multidisciplinary foundation shapes both my research methodology and scholarly approach to addressing contemporary issues.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Currently, I'm pursuing my PhD in Philosophy at the University of Johannesburg, focusing on developing comprehensive ethical decision-making frameworks for pandemic response.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Profile Placeholder Aesthetic */
+.profile-placeholder-wrapper { position: relative; width: 220px; height: 220px; }
+.profile-placeholder {
+    width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, #36454F 0%, #607080 100%);
+    border-radius: 50%; box-shadow: 0 10px 25px rgba(0,0,0,0.1); position: relative; z-index: 2;
+    text-align: center; padding: 1rem; transition: all 0.3s ease;
+}
+.profile-placeholder:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+
+.profile-text { display: flex; flex-direction: column; align-items: center; }
+.profile-text .initials {
+    font-weight: 900; font-size: 3.5rem;
+    background: linear-gradient(270deg, #d4d4d4, #a9a9a9, #c0c0c0, #808080);
+    background-size: 800% 800%; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    animation: gradientShift 6s ease infinite; text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.profile-text .surname {
+    font-weight: 600; font-size: 1.3rem; margin-top: -5px;
+    background: linear-gradient(270deg, #d4d4d4, #a9a9a9, #c0c0c0, #808080);
+    background-size: 800% 800%; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    animation: gradientShift 8s ease infinite; letter-spacing: 1px;
+}
+
+@keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
+.shine-circle {
+    position: absolute; top: -5px; left: -5px; width: 230px; height: 230px;
+    border-radius: 50%; border: 4px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 20px rgba(255,255,255,0.15), 0 0 40px rgba(255,255,255,0.1);
+    animation: rotateShine 6s linear infinite, pulseGlow 3s ease-in-out infinite; z-index: 1;
+}
+@keyframes rotateShine { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes pulseGlow { 0%,100% { box-shadow: 0 0 20px rgba(255,255,255,0.15),0 0 40px rgba(255,255,255,0.1); } 50% { box-shadow: 0 0 30px rgba(255,255,255,0.2),0 0 60px rgba(255,255,255,0.12); } }
+
+.profile-placeholder-wrapper:hover .shine-circle { box-shadow: 0 0 35px rgba(255,255,255,0.2), 0 0 70px rgba(255,255,255,0.15); }
+.profile-placeholder-wrapper:hover .profile-text .initials { font-size: 3.7rem; text-shadow: 0 3px 10px rgba(0,0,0,0.25); }
+.profile-placeholder-wrapper:hover .profile-text .surname { font-size: 1.4rem; }
+
+.light-sweep {
+    position: absolute; top: -10%; left: -10%; width: 140%; height: 140%; background: rgba(255,255,255,0.1);
+    border-radius: 50%; transform: rotate(-45deg) translateX(-100%);
+    animation: sweep 3s linear infinite; pointer-events: none; z-index: 3;
+}
+@keyframes sweep { 0% { transform: rotate(-45deg) translateX(-100%); opacity: 0; } 50% { opacity: 1; } 100% { transform: rotate(-45deg) translateX(100%); opacity: 0; } }
+</style>
+
+</section>
+
+<!-- Education Section -->
+<section id="education" class="py-20 bg-gray-100" data-aos="fade-up">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center header-color">Education</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- PhD Card -->
+            <div class="education-card bg-white p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center mb-4">
+                    <div class="w-14 h-14 bg-header rounded-full flex items-center justify-center text-white mr-5 shadow-md">
+                        <i data-feather="award" class="w-7 h-7"></i>
                     </div>
-                    <div class="flex items-center">
-                        <div class="w-12 h-12 bg-header rounded-full flex items-center justify-center text-white mr-4 shadow-md">
-                            <i data-feather="map-pin" class="w-6 h-6"></i>
+                    <h3 class="text-xl font-semibold header-color">PhD in Philosophy</h3>
+                </div>
+                <p class="text-gray-600 font-medium mb-2">University of Johannesburg</p>
+                <p class="text-gray-500 mb-4">2025 - Present</p>
+                <p class="text-gray-700 leading-relaxed">
+                    Developing comprehensive ethical decision-making frameworks for pandemic response, integrating virtue ethics, deontology, and utilitarianism.
+                </p>
+            </div>
+
+            <!-- MPhil International Community Health Card -->
+            <div class="education-card bg-white p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center mb-4">
+                    <div class="w-14 h-14 bg-header rounded-full flex items-center justify-center text-white mr-5 shadow-md">
+                        <i data-feather="heart" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold header-color">MPhil International Community Health</h3>
+                </div>
+                <p class="text-gray-600 font-medium mb-2">University of Oslo</p>
+                <p class="text-gray-500 mb-4">2020 - 2023</p>
+                <p class="text-gray-700 leading-relaxed">
+                    Examined vaccine nationalism during the COVID-19 pandemic, analyzing moral dimensions in disaster situations.
+                </p>
+            </div>
+
+            <!-- MPhil Peace and Conflict Card -->
+            <div class="education-card bg-white p-8 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center mb-4">
+                    <div class="w-14 h-14 bg-header rounded-full flex items-center justify-center text-white mr-5 shadow-md">
+                        <i data-feather="globe" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold header-color">MPhil Peace and Conflict Transformation</h3>
+                </div>
+                <p class="text-gray-600 font-medium mb-2">UIT - The Arctic University of Norway</p>
+                <p class="text-gray-500 mb-4">2018 - 2020</p>
+                <p class="text-gray-700 leading-relaxed">
+                    Explored how civil society organizations advocate for dissent, using Inform Action Kenya as a case study.
+                </p>
+            </div>
+
+            <!-- BSc Hons Political Science Card -->
+            <div class="education-card bg-white p-8 rounded-xl" data-aos="fade-up" data-aos-delay="400">
+                <div class="flex items-center mb-4">
+                    <div class="w-14 h-14 bg-header rounded-full flex items-center justify-center text-white mr-5 shadow-md">
+                        <i data-feather="book" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold header-color">BSc Hons Political Science</h3>
+                </div>
+                <p class="text-gray-600 font-medium mb-2">University of Zimbabwe</p>
+                <p class="text-gray-500 mb-4">2013 - 2016</p>
+                <p class="text-gray-700 leading-relaxed">
+                    Investigated the role of women-related civil society organizations in promoting women's political participation in Zimbabwe.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Research Timeline Section -->
+<section id="research" class="py-20">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center header-color" data-aos="fade-down">Research Evolution</h2>
+        <div class="research-timeline max-w-4xl mx-auto mb-16">
+            <!-- BSc Hons Political Science -->
+            <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                <h4 class="text-xl font-semibold mb-4 header-color">BSc. Hons in Political Science (2013 - 2016)</h4>
+                <p class="text-gray-700 mb-8 leading-relaxed">
+                    Investigated the role of women-related civil society organizations in Zimbabwe and their impact on promoting women's political participation.
+                </p>
+            </div>
+
+            <!-- MPhil Peace and Conflict Transformation -->
+            <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                <h4 class="text-xl font-semibold mb-4 header-color">MPhil Peace and Conflict Transformation (2018 - 2020)</h4>
+                <p class="text-gray-700 mb-4 leading-relaxed">
+                    Explored how sections within civil society advocate for dissent, using Inform Action Kenya as a case study to understand mechanisms of conflict transformation.
+                </p>
+                <a href="https://munin.uit.no/handle/10037/18827" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-header hover:text-gray-700 font-medium transition-all duration-300 group mb-8">
+                    View Dissertation
+                    <i data-feather="external-link" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                </a>
+            </div>
+
+            <!-- MPhil International Community Health -->
+            <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                <h4 class="text-xl font-semibold mb-4 header-color">MPhil International Community Health (2020 - 2023)</h4>
+                <p class="text-gray-700 mb-8 leading-relaxed">
+                    Examined vaccine nationalism during the COVID-19 pandemic, analyzing whether such actions constitute moral dilemmas, virtuous actions, or vicious actions in disaster situations.
+                </p>
+            </div>
+
+            <!-- PhD Candidate in Philosophy -->
+            <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+                <h4 class="text-xl font-semibold mb-4 header-color">PhD Candidate in Philosophy (2025 - Present)</h4>
+                <p class="text-gray-700 mb-8 leading-relaxed">
+                    Developing comprehensive ethical decision-making frameworks for pandemic response, integrating virtue ethics, deontology, and utilitarianism.
+                </p>
+            </div>
+        </div>
+
+        <!-- Current Research Focus -->
+        <div class="max-w-4xl mx-auto mb-16">
+            <h3 class="text-2xl font-semibold mb-8 header-color text-center" data-aos="fade-up">Current Research Focus</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Methodology Card 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl methodology-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-header rounded-full flex items-center justify-center text-white mr-5 shadow-md">
+                            <i data-feather="layers" class="w-7 h-7"></i>
                         </div>
-                        <div>
-                            <p class="text-sm text-gray-500">Location</p>
-                            <p class="text-header font-medium">University of Johannesburg, South Africa</p>
+                        <h4 class="text-xl font-semibold header-color">Integrated Ethical Frameworks</h4>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Developing comprehensive public health ethics frameworks that synthesise virtue ethics, deontology, and utilitarianism to address complex ethical challenges in public health emergencies. This includes creating decision-making tools for policymakers during crises.
+                    </p>
+                </div>
+
+                <!-- Methodology Card 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl methodology-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-header rounded-full flex items-center justify-center text-white mr-5 shadow-md">
+                            <i data-feather="crosshair" class="w-7 h-7"></i>
                         </div>
+                        <h4 class="text-xl font-semibold header-color">Interdisciplinary Methodology</h4>
+                    </div>
+                    <p class="text-gray-70 leading-relaxed">
+                        Synthesising insights from public health ethics and moral philosophy through philosophical and conceptual analysis to create holistic frameworks for ethical decision-making. This approach bridges theoretical philosophy with practical public health applications.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center header-color">Contact & Collaboration</h2>
+        <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                I welcome opportunities for academic collaboration, research partnerships, and scholarly discourse on public health ethics, moral philosophy, and interdisciplinary approaches to societal challenges.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6 mt-8">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-header rounded-full flex items-center justify-center text-white mr-4 shadow-md">
+                        <i data-feather="mail" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500">Email</p>
+                        <a href="mailto:217048226@student.uj.ac.za" class="text-header hover:text-gray-700 font-medium">217048226@student.uj.ac.za</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-header rounded-full flex items-center justify-center text-white mr-4 shadow-md">
+                        <i data-feather="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500">Location</p>
+                        <p class="text-header font-medium">University of Johannesburg, South Africa</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-</main>
+    </div>
+</section>
 
 <!-- Footer -->
 <footer class="bg-header text-white py-12">
@@ -387,7 +382,7 @@
             </div>
         </div>
         <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
-            <p>© 2025 Thembinkosi KM Rushwaya. All rights reserved. Made with AI</p>
+            <p>© 2025 Thembinkosi KM Rushwaya. All rights reserved.</p>
         </div>
     </div>
 </footer>
