@@ -48,14 +48,16 @@
         }
 
         @media (max-width: 768px) {
-            .research-timeline h4 { position: relative !important; top: auto !important; background: none !important; box-shadow: none !important; }
-            .mobile-menu { position: absolute; top: 100%; left: 0; right: 0; background-color: #36454F; padding: 1rem; flex-direction: column; align-items: flex-start; }
-            
-            /* FIX: Adjust padding for mobile */
-            body {
-                padding-top: 70px;
-            }
-        }
+    .research-timeline h4 { position: relative !important; top: auto !important; background: none !important; box-shadow: none !important; }
+    .mobile-menu { 
+        background-color: #36454F; 
+        padding: 1rem; 
+        flex-direction: column; 
+        align-items: flex-start; 
+        display: none; /* hidden by default */
+    }
+    .mobile-menu.active { display: flex; } /* show when toggled */
+}
     </style>
 </head>
 <body class="bg-gray-50 font-sans">
@@ -76,7 +78,7 @@
                 <span class="sr-only">Toggle menu</span>
             </button>
         </div>
-        <div class="mobile-menu flex flex-col space-y-4 mt-4 md:hidden" id="mobile-menu" aria-label="Mobile menu">
+        <div class="mobile-menu hidden flex-col space-y-4 mt-4 md:hidden" id="mobile-menu" aria-label="Mobile menu">
             <a href="#about" class="hover:text-gray-300 transition-colors duration-300 py-2">About</a>
             <a href="#education" class="hover:text-gray-300 transition-colors duration-300 py-2">Education</a>
             <a href="#research" class="hover:text-gray-300 transition-colors duration-300 py-2">Research</a>
