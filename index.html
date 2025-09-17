@@ -429,37 +429,30 @@
             </p>
 
             <div class="grid md:grid-cols-2 gap-6 mt-8">
-                <!-- Student Email -->
-                <div class="flex items-center" data-aos="fade-right" data-aos-delay="100">
-                    <div class="w-12 h-12 bg-header rounded-full flex items-center justify-center text-white mr-4 shadow-md">
-                        <i data-feather="mail" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <p class="text-sm text-gray-500">Email</p>
-                        <a href="mailto:217048226@student.uj.ac.za" 
-                           class="hover:text-gray-300 transition-transform duration-300 hover:scale-110 flex items-center" 
-                           title="Email Me">
-                            <i data-feather="mail" class="w-4 h-4 mr-2"></i>
-                            <span>217048226@student.uj.ac.za</span>
-                        </a>
-                    </div>
-                </div>
+                <!-- Email Icons Row with Tooltips -->
+<div class="flex space-x-4" data-aos="fade-up" data-aos-delay="100">
+    <!-- Student Email -->
+    <a href="mailto:217048226@student.uj.ac.za"
+       class="relative w-12 h-12 bg-header rounded-full flex items-center justify-center text-white shadow-md hover:scale-110 transition-transform duration-300 group"
+       title="Contact me">
+        <i data-feather="mail" class="w-6 h-6"></i>
+        <!-- Tooltip -->
+        <span class="absolute bottom-full mb-2 hidden group-hover:block px-2 py-1 text-xs text-white bg-gray-800 rounded shadow-lg whitespace-nowrap">
+            Contact me 
+        </span>
+    </a>
 
-                <!-- Supervisor Email -->
-                <div class="flex items-center" data-aos="fade-left" data-aos-delay="200">
-                    <div class="w-12 h-12 bg-header rounded-full flex items-center justify-center text-white mr-4 shadow-md">
-                        <i data-feather="mail" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <p class="text-sm text-gray-500">Supervisor Email</p>
-                        <a href="mailto:bsmart@uj.ac.za" 
-                           class="hover:text-gray-300 transition-transform duration-300 hover:scale-110 flex items-center" 
-                           title="Email Supervisor">
-                            <i data-feather="mail" class="w-4 h-4 mr-2"></i>
-                            <span>bsmart@uj.ac.za</span>
-                        </a>
-                    </div>
-                </div>
+    <!-- Supervisor Email -->
+    <a href="mailto:bsmart@uj.ac.za"
+       class="relative w-12 h-12 bg-header rounded-full flex items-center justify-center text-white shadow-md hover:scale-110 transition-transform duration-300 group"
+       title="Email Supervisor">
+        <i data-feather="mail" class="w-6 h-6"></i>
+        <!-- Tooltip -->
+        <span class="absolute bottom-full mb-2 hidden group-hover:block px-2 py-1 text-xs text-white bg-gray-800 rounded shadow-lg whitespace-nowrap">
+            Email Supervisor
+        </span>
+    </a>
+</div>
 
                 <!-- Location -->
                 <div class="flex items-center md:col-span-2" data-aos="fade-up" data-aos-delay="300">
