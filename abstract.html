@@ -251,12 +251,17 @@
 
     <script>
     function closeAbstract() {
-        // Try to close the window (works if opened via target="_blank")
-        if (window.opener) {
+        // First try the simple window.close()
+        try {
             window.close();
-        } else {
-            // Fallback: redirect to main portfolio at PhD section
-            window.location.href = 'index.html#phd-section';
+        } catch (e) {
+            // If that fails, try the fallback approach
+            if (window.opener) {
+                window.close();
+            } else {
+                // Final fallback: redirect to main portfolio at PhD section
+                window.location.href = 'index.html#phd-section';
+            }
         }
     }
     </script>
