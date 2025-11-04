@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submitted Proposal Abstract</title>
+    <title>PhD Abstract - Thembinkosi KM Rushwaya</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -69,9 +69,9 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        <a href="#" onclick="closeAbstract(); return false;" class="back-link">← Back to Portfolio</a>
         
-        <h1>Proposal Abstract</h1>
+        <h1>PhD Research Abstract</h1>
         <h2>Developing Ethical Decision-Making Frameworks for Pandemic Response</h2>
         <h3>Thembinkosi KM Rushwaya - University of Johannesburg (2025-2029)</h3>
         
@@ -137,5 +137,17 @@
             </div>
         </div>
     </div>
+
+    <script>
+    function closeAbstract() {
+        // Try to close the window (works if opened via target="_blank")
+        if (window.opener) {
+            window.close();
+        } else {
+            // Fallback: redirect to main portfolio at PhD section
+            window.location.href = 'index.html#phd-section';
+        }
+    }
+    </script>
 </body>
 </html>
